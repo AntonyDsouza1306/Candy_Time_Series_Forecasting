@@ -3,7 +3,7 @@
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
-#import seaborn as sns
+import seaborn as sns
 from sklearn.preprocessing import MinMaxScaler
 from keras.preprocessing.sequence import TimeseriesGenerator
 from keras.models import Sequential
@@ -39,16 +39,16 @@ years = df['year'].unique()
 
 
 #Box plot Year Wise and seasonality Wise in streamlit
-#fig, axes = plt.subplots(1, 2, figsize=(20,7), dpi= 80)
-#sns.boxplot(x='year', y='Per Capita Production', data=df, ax=axes[0])
-#sns.boxplot(x='month', y='Per Capita Production', data=df.loc[~df.year.isin([1972, 2016]), :])
+fig, axes = plt.subplots(1, 2, figsize=(20,7), dpi= 80)
+sns.boxplot(x='year', y='Per Capita Production', data=df, ax=axes[0])
+sns.boxplot(x='month', y='Per Capita Production', data=df.loc[~df.year.isin([1972, 2016]), :])
 
-# Set Title
-#axes[0].set_title('Year-wise Box Plot\n(The Trend)', fontsize=18); 
-#axes[0].tick_params(axis='x', rotation=90)
-#axes[1].set_title('Month-wise Box Plot\n(The Seasonality)', fontsize=18)
-#plt.show()
-#st.pyplot(fig)
+#Set Title
+axes[0].set_title('Year-wise Box Plot\n(The Trend)', fontsize=18); 
+axes[0].tick_params(axis='x', rotation=90)
+axes[1].set_title('Month-wise Box Plot\n(The Seasonality)', fontsize=18)
+plt.show()
+st.pyplot(fig)
 
 
 #train and test split
