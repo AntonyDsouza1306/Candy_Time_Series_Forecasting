@@ -52,13 +52,13 @@ st.pyplot(fig)
 
 
 #train and test split
-train1 = df.iloc[:516, 0]
-test1 = df.iloc[516:, 0]
+train1 = df.iloc[:528, 0]
+test1 = df.iloc[528:, 0]
 
 train = np.asarray(train1)
-train = np.reshape(train, (516, 1))
+train = np.reshape(train, (528, 1))
 test = np.asarray(test1)
-test = np.reshape(test, (24, 1))
+test = np.reshape(test, (12, 1))
 
 # Normalization
 scaler = MinMaxScaler()
@@ -69,7 +69,7 @@ scaled_test = scaler.transform(test)
 
 
 # Time Series Generator
-n_input = 24
+n_input = 12
 n_features = 1
 generator = TimeseriesGenerator(scaled_train, scaled_train, length=n_input, batch_size=1)
 
