@@ -5,11 +5,11 @@ This web app forecasting the trend and seasonality of Candy Production in US Mar
 
 The web app was built in Python using the following libraries:
 
-streamlit
-pandas
-numpy
-matplotlib
-seaborn
-scikit-learn
-tensorflow
+streamlit\n
+pandas\n
+numpy\n
+matplotlib\n
+seaborn\n
+scikit-learn\n
+tensorflow\n
 datetime
